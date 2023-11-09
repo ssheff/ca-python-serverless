@@ -19,7 +19,7 @@ class TestGetAPI(unittest.TestCase):
         client, table = init()
         item = {'item': 'I need to finish this test!', 'completed': True}
 
-        todo = create(client, '1', item, table.table_name,
+        todo_from_get = create(client, '1', item, table.table_name,
                       ['completed', 'item'])
         todo_from_get = get_one(client, '1', todo['todoId'], table.table_name)
 
